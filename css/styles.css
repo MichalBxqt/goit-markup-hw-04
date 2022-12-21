@@ -87,6 +87,12 @@ body {
 .top-section-list-contact:hover {
   color: var(--hover-text-color);
 }
+.icon-contact {
+  margin-right: 10px;
+}
+.icon-contact:hover {
+color: var(--hover-text-color);
+}
 
 .item-contact {
   margin-right: 50px;
@@ -139,7 +145,17 @@ body {
 .lorem-section-block .item {
   margin-left: 30px;
   margin-right: 0px;
-  
+}
+.lorem-icon-div {
+   display: flex;
+  width: 270px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  background-color: var(--our-team-background-color);
 }
 .lorem-title {
   font-size: 14px;
