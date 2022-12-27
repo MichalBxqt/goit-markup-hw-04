@@ -6,7 +6,8 @@
   --black-footer-background-color: #2f303a;
   --our-team-background-color: #f5f4fa;
   --our-team-icons-colos: #afb1b8;
-  --border-color: #EEEEEE;
+  --border-color: #eeeeee;
+  --footer-icon-background: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -102,8 +103,8 @@ body {
 /* title page with button */
 .title-section {
   padding: 195px;
-  height: ;
-  background-image: url("/images/main_page_background.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url(/images/main_page_background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1600px 600px;
@@ -286,23 +287,34 @@ body {
   height: 92px;
   justify-content: center;
   align-items: center;
-  color: #afb1b8;
-  border: 1px solid #afb1b8;
+  fill: var(--our-team-icons-colos);
+  border: 1px solid var(--our-team-icons-colos);
   border-radius: 4px;
   cursor: pointer;
 }
 .our-clients-logo-link:hover,
 .our-clients-logo-link:focus {
-border: 1px solid var(--hover-text-color)
+  border: 1px solid var(--hover-text-color);
+  fill: var(--hover-text-color)
 }
 
 .client-logo {
-  fill: currentColor
+  fill: currentColor;
 }
 /* footer section */
+.footer-links-icons-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  gap: 50px;
+}
+.footer-section-list {
+  margin-top: 20px;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+}
 .footer {
   background-color: var(--black-footer-background-color);
-  padding: 60px 0px;
 }
 .footer .item {
   margin-bottom: 9px;
@@ -324,6 +336,7 @@ border: 1px solid var(--hover-text-color)
   letter-spacing: 0.03em;
   color: var(--gray-text-color);
   text-decoration: none;
+  font-style: normal;
 }
 .bottom-section-contact:hover {
   color: var(--hover-text-color);
@@ -335,9 +348,43 @@ border: 1px solid var(--hover-text-color)
   letter-spacing: 0.03em;
   color: var(--white-text-color);
   text-decoration: none;
+  font-style: normal;
+  white-space: nowrap;
 }
 .footer-section-adress:hover {
   color: var(--hover-text-color);
+}
+/* footer section icons */
+.footer-icon-list {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+}
+.footer-icon-item:not(:first-child) {
+  margin-left: 10px;
+}
+.footer-icon-title {
+font-size: 14px;
+font-weight: 700;
+line-height: 16px;
+letter-spacing: 0.03em;
+color: var(--white-text-color);
+text-transform: uppercase;
+margin-bottom: 20px;
+}
+.footer-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  fill: var(--white-text-color);
+  background-color: var(--footer-icon-background);
+  border-radius: 50%;
+}
+.footer-icon-link:hover,
+.footer-icon-link:focus {
+  background-color: var(--hover-text-color);
 }
 /* portfolio section */
 /* button-section */
@@ -395,11 +442,9 @@ border: 1px solid var(--hover-text-color)
 .photo-boxes-list .item:hover {
   box-shadow: 1px 4px 6px 0px #00000029;
 
-  box-shadow: 0px 4px 4px 0px #0000000F;
-  
-  box-shadow: 0px 1px 1px 0px #0000001F;
-  
-  
+  box-shadow: 0px 4px 4px 0px #0000000f;
+
+  box-shadow: 0px 1px 1px 0px #0000001f;
 }
 .portfolio-photo-section {
   padding-top: 0px;
