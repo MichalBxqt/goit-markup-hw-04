@@ -295,11 +295,10 @@ body {
 .our-clients-logo-link:hover,
 .our-clients-logo-link:focus {
   border: 1px solid var(--hover-text-color);
-  fill: var(--hover-text-color)
+  fill: var(--hover-text-color);
 }
-
 .client-logo {
-  fill: currentColor;
+  color: var(--hover-text-color);
 }
 /* footer section */
 .footer-links-icons-container {
